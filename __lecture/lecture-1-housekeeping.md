@@ -12,41 +12,6 @@ in SomeComponent (at src/index.js:24)
 in App (at src/index.js:31)
 ```
 
-EXAMPLE
-
-```jsx
-
-const item = [
-  {text: 'Item 1',
-  id: "220"},
-  {text: 'Item 2',
-  id: "112"},
-]
-
-const Bacon ({items}) => (
-  {items.map(item => <li key={item.id}>{item.text} </li>   )}
-)
-```
-**You can also use the text if there is no id but you must remove the space ** 
-
-EXAMPLE: 
-
-```jsx
-
-const item = [
-  {text: 'Item 1'},
-  {text: 'Item 2'},
-]
-
-**THE SYNTAX HERE MAY NOT BE ACCURATE**
-
-const Bacon ({items}) => (
-  {items.map(item => <li key={`${item.text.replace(" ", "-")}`}>{item.text} </li>)}
-)
-```
-
-
-
 ---
 
 ### 🏠Housekeeping: Modules
@@ -118,7 +83,6 @@ export const MAGIC_NUMBER = 123;
 ```
 
 ```js
-This is wrong... needs squigglies inless you want to inport it as object. 
 // src/index.js
 import MAGIC_NUMBER from './data';
 ```
