@@ -23,6 +23,8 @@ ReactDOM.render(
   <Button>Hello World</Button>,
   document.querySelector('#root')
 );
+
+**You can also use props in the button.** 
 ```
 
 ---
@@ -97,9 +99,10 @@ Convert the following inline styles to styled-components
   height: 300px;
 }
 
+
+
+
 ```
-
-
 ```jsx
 function App(props) {
   return (
@@ -110,10 +113,31 @@ function App(props) {
 }
 ```
 
+```jsx
+
+
+MY ADDITION
+
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  margin: 0 auto;
+  height: 300px;
+`
+
+function App() {
+  return (
+    <Wrapper>
+      Hello World
+    </Wrapper>
+  )
+}
+```
+
 ---
 
 ### Exercise #2
-
+ORIGINAL
 ```css
 
 .btn {
@@ -144,6 +168,38 @@ function IconButton(props) {
   )
 }
 ```
+
+MINE: 
+```jsx
+
+const Button = styled.button`
+  color: tomato;
+  font-weight: bold;
+  padding: 20px;
+
+  &:hover, &:focus {
+    transform: translateY(-3px);
+  }
+`
+const Icon= styled.i`
+  width: 32px;
+  height: 32px;
+`
+
+function IconButton(props) {
+  return (
+    <Button>
+      <Icon>
+        {props.icon}
+      </Icon>
+      {props.children}
+    </Button>
+  )
+}
+
+
+```
+ NOTE: ANOTHE WAY WOULD BE TO NOT MAKE NEW ICON CONST BUT NEST IT INTO THE BUTTON IF IT DOESN'T NEED TO BE USED OUTSIDE THE BUTTON. 
 
 ---
 
